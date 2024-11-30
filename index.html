@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AlpineWorks Helm Chart Repository</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="alpineworks helm charts repository" />
+    <meta
+      property="og:description"
+      content="the helm chart repository for the alpineworks github organization"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Light mode colors */
+        --bg-color: #ffffff; /* Background: White */
+        --text-color: #1a1a1a; /* Main text: Very dark gray */
+        --accent-color: #0066cc; /* Accent: A bright blue */
+        --border-color: #dddddd; /* Border: Light gray */
+        --hover-color: #005bb5; /* Hover: Slightly darker blue */
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* Dark mode colors */
+          --bg-color: #0a0f1f; /* Darker blue for background */
+          --text-color: #f5f5dc; /* Creamy white for text */
+          --accent-color: #66b2ff; /* Accent: Light blue for contrast */
+          --border-color: #162447; /* Border: Even darker blue-gray */
+          --hover-color: #338bff; /* Hover: Bright blue */
+        }
+      }
+
+      body {
+        font-family: "Space Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        padding: 10px;
+        padding-inline: 30px;
+        background-color: var(--bg-color); /* Apply background color */
+        color: var(--text-color); /* Apply text color */
+      }
+
+      a.no-underline {
+        text-decoration: none;
+        color: var(--accent-color);
+      }
+
+      a.no-underline:hover {
+        color: var(--hover-color);
+      }
+
+      h1 {
+        letter-spacing: 0.2rem;
+      }
+
+      h2 {
+        letter-spacing: 0.1rem;
+        color: var(--accent-color); /* Accent color for the header */
+      }
+
+      .half-width {
+        width: 50%;
+      }
+
+      @media (max-width: 600px) {
+        .half-width {
+          width: 100%;
+        }
+      }
+
+      p {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AlpineWorks Helm Charts</h1>
+    <h2>
+      <a
+        class="no-underline"
+        href="https://github.com/alpineworks/katalog-agent"
+        >katalog-agent</a
+      >
+    </h2>
+    <p class="half-width">
+      katalog-agent is an application in the katalog ecosystem that is
+      responsible for sending cluster information to the central server.
+    </p>
+  </body>
+</html>
