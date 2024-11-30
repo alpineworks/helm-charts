@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   katalog-agent:
   - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2024-11-30T23:14:09.947118169Z"
+    description: A Helm chart for Kubernetes
+    digest: 289652641172e495d696b30acf3f3c3159fcb81fb8384c24da23e58fecafc8a9
+    name: katalog-agent
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.1/katalog-agent-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-11-30T04:11:57.505092447Z"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-30T04:11:57.505102296Z"
+generated: "2024-11-30T23:14:09.947142627Z"
