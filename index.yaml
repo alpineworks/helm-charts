@@ -1,6 +1,45 @@
 apiVersion: v1
 entries:
+  katalog:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-12-02T19:14:38.325992225Z"
+    dependencies:
+    - name: backend
+      repository: file://charts/backend
+      version: 0.1.0
+    - name: frontend
+      repository: file://charts/frontend
+      version: 0.1.0
+    - name: migrations
+      repository: file://charts/migrations
+      version: 0.1.0
+    - condition: dragonfly.enabled
+      name: dragonfly
+      repository: oci://ghcr.io/dragonflydb/dragonfly/helm
+      version: v1.25.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 16.2.3
+    description: A Helm chart for Kubernetes
+    digest: 116cc6f8ec8b3804c5926a93319d735d2d86c7964e04ea8f6e03dc65dff7eab5
+    name: katalog
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/katalog-0.1.0/katalog-0.1.0.tgz
+    version: 0.1.0
   katalog-agent:
+  - apiVersion: v2
+    appVersion: v1.0.4
+    created: "2024-12-02T19:14:38.517306156Z"
+    description: A Helm chart for Kubernetes
+    digest: 431500026e07b38f432d607cd29e1ecbfa5a350ec431ad5777b2850130836829
+    name: katalog-agent
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.2/katalog-agent-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.2
     created: "2024-11-30T23:14:09.947118169Z"
@@ -21,4 +60,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-30T23:14:09.947142627Z"
+generated: "2024-12-02T19:14:38.517327276Z"
