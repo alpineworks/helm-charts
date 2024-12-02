@@ -1,0 +1,50 @@
+dragonfly:
+  enabled: true
+
+postgresql:
+  enabled: true
+  global:
+    postgresql:
+      auth:
+        username: katalog
+        password: password
+        database: katalog
+  commonAnnotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-weight": "-5"
+
+backend:
+  replicaCount: 1
+
+  image:
+    repository: ghcr.io/alpineworks/katalog-backend
+
+  environmentVariables:
+    KATALOG_LOG_LEVEL: "debug"
+    KATALOG_DRAGONFLY_HOST: "katalog-dragonfly.default.svc.cluster.local"
+    KATALOG_DRAGONFLY_PORT: "6379"
+    KATALOG_DRAGONFLY_AUTH: ""
+
+    # yamllint disable-line rule:line-length
+    KATALOG_POSTGRES_URL: "postgres://katalog:password@katalog-postgresql.default.svc.cluster.local:5432/katalog?sslmode=disable"
+
+    # YOU MUST CHANGE KATALOG_JWE_SECRET, DO NOT USE THIS VALUE IN PRODUCTION
+    # generate a safe secret with:
+    # openssl rand -base64 32
+    KATALOG_JWE_SECRET: "c+lnWb9DPKlBdBlpyc8+jx18Hs2tnNVLra7nNFYFq28="
+
+    # YOU MUST CHANGE KATALOG_AES_KEY, DO NOT USE THIS VALUE IN PRODUCTION
+    # generate a safe secret (key field) with:
+    # openssl enc -aes-128-cbc -k secret -P -pbkdf2
+    KATALOG_AES_KEY: "D452864AE91AF855C9E89A1F528E930D"
+
+    KATALOG_METRICS_ENABLED: "true"
+    KATALOG_METRICS_PORT: "8081"
+
+    KATALOG_TRACING_ENABLED: "false"
+
+frontend:
+  replicaCount: 1
+
+  image:
+    repository: ghcr.io/alpineworks/katalog-frontend

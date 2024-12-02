@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "frontend.fullname" . }}-env-configmap
+  labels:
+    {{- include "frontend.labels" . | nindent 4 }}
+data:
+  # YOU MUST CHANGE AUTH_SECRET, DO NOT USE THIS VALUE IN PRODUCTION
+  # must match backend KATALOG_JWE_SECRET
+  AUTH_SECRET: "c+lnWb9DPKlBdBlpyc8+jx18Hs2tnNVLra7nNFYFq28="
+  AUTH_URL: "http://localhost:3000"
+
+  BACKEND_HOST_URL: "http://katalog-backend.default.svc.cluster.local:8080"
+  NEXT_PUBLIC_BACKEND_HOST_URL: "http://localhost:8080"
+
+  AUTH_GITHUB_ID: "Ov23liIltTmPJT6iNVTB"
+  AUTH_GITHUB_SECRET: "5d20dd6a979edede82ef390646761746f0dfe814"
+
+  AUTH_TRUST_HOST: "true"
+  AUTHJS_DEBUG: "true"

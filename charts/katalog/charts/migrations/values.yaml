@@ -1,0 +1,9 @@
+image:
+  repository: "ghcr.io/alpineworks/katalog-migrations"
+
+environmentVariables:
+  DATABASE_USER: "katalog"
+  DATABASE_PASSWORD: "password"
+  DATABASE_HOST: "katalog-postgresql.default.svc.cluster.local"
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: "katalog"
