@@ -1,19 +1,18 @@
-# Default values for katalog-agent.
+# Default values for backend.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+replicaCount: 1
+
 image:
-  repository: ghcr.io/alpineworks/katalog-agent
+  repository: ghcr.io/alpineworks/katalog-backend
   pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-
-environmentVariables:
-  CRON_SCHEDULE: "* * * * *"
-  BLACKLISTED_NAMESPACES: ""
-  KATALOG_HOST: "katalog-backend.default.svc.cluster.local:50051"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -44,7 +43,12 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 8081
+  http:
+    port: 8080
+  grpc:
+    port: 50051
+  metrics:
+    port: 8081
 
 resources:
   {}
@@ -59,14 +63,21 @@ resources:
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /healthcheck
-    port: http
-readinessProbe:
-  httpGet:
-    path: /healthcheck
-    port: http
+# livenessProbe:
+#   httpGet:
+#     path: /healthcheck
+#     port: metrics
+# readinessProbe:
+#   httpGet:
+#     path: /healthcheck
+#     port: metrics
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 

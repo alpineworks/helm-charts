@@ -1,0 +1,18 @@
+dependencies:
+- name: backend
+  repository: file://charts/backend
+  version: 0.1.0
+- name: frontend
+  repository: file://charts/frontend
+  version: 0.1.0
+- name: migrations
+  repository: file://charts/migrations
+  version: 0.1.0
+- name: dragonfly
+  repository: oci://ghcr.io/dragonflydb/dragonfly/helm
+  version: v1.25.4
+- name: postgresql
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 16.2.3
+digest: sha256:03c09cea98b813f8037ff411d5b5e62ef65d9732e47310c5e940a94c7c203ccb
+generated: "2024-11-30T22:59:44.45125-08:00"

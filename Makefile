@@ -14,3 +14,7 @@ kind-delete:
 .PHONY: lint-katalog-agent
 lint-katalog-agent:
 	helm lint charts/katalog-agent
+
+.PHONY: lint-katalog
+lint-katalog:
+	helm lint charts/katalog
