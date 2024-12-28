@@ -7,12 +7,12 @@ dependencies:
   version: 0.1.1
 - name: migrations
   repository: file://charts/migrations
-  version: 0.1.1
+  version: 0.1.2
 - name: dragonfly
   repository: oci://ghcr.io/dragonflydb/dragonfly/helm
   version: v1.25.4
 - name: postgresql
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 16.2.3
-digest: sha256:1fec1e899256f851c57181c4a286ad7d48086a743dc170b85c81225f3336bffe
-generated: "2024-12-27T19:32:03.938883-08:00"
+digest: sha256:74e3ed5e297c14ed00c6a5a928fd7d22a58d34254e7356ca55ae9d67e77f1dcf
+generated: "2024-12-27T22:51:52.297051-08:00"

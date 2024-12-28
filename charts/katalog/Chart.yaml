@@ -31,7 +31,7 @@ dependencies:
     version: "0.1.1"
     repository: "file://charts/frontend"
   - name: migrations
-    version: "0.1.1"
+    version: "0.1.2"
     repository: "file://charts/migrations"
   - name: dragonfly
     version: "v1.25.4"
