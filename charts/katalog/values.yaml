@@ -48,3 +48,18 @@ frontend:
 
   image:
     repository: ghcr.io/alpineworks/katalog-frontend
+
+  environmentVariables:
+    # YOU MUST CHANGE AUTH_SECRET, DO NOT USE THIS VALUE IN PRODUCTION
+    # must match backend KATALOG_JWE_SECRET
+    AUTH_SECRET: "c+lnWb9DPKlBdBlpyc8+jx18Hs2tnNVLra7nNFYFq28="
+    AUTH_URL: "http://localhost:3000"
+
+    BACKEND_HOST_URL: "http://katalog-backend.default.svc.cluster.local:8080"
+    NEXT_PUBLIC_BACKEND_HOST_URL: "http://localhost:8080"
+
+    AUTH_GITHUB_ID: ""
+    AUTH_GITHUB_SECRET: ""
+
+    AUTH_TRUST_HOST: "true"
+    AUTHJS_DEBUG: "true"
