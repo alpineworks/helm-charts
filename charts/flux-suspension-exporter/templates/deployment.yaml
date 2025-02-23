@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "flux-suspensions-exporter.fullname" . }}
+  name: {{ include "flux-suspension-exporter.fullname" . }}
   labels:
-    {{- include "flux-suspensions-exporter.labels" . | nindent 4 }}
+    {{- include "flux-suspension-exporter.labels" . | nindent 4 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "flux-suspensions-exporter.selectorLabels" . | nindent 6 }}
+      {{- include "flux-suspension-exporter.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "flux-suspensions-exporter.labels" . | nindent 8 }}
+        {{- include "flux-suspension-exporter.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -25,14 +25,14 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "flux-suspensions-exporter.serviceAccountName" . }}
+      serviceAccountName: {{ include "flux-suspension-exporter.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           envFrom:
             - configMapRef:
-                name: {{ include "flux-suspensions-exporter.fullname" . }}-env-configmap
+                name: {{ include "flux-suspension-exporter.fullname" . }}-env-configmap
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

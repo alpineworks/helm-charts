@@ -1,6 +1,6 @@
 apiVersion: v2
-name: flux-suspensions-exporter
-description: helm chart for flux-suspensions-exporter, a tool to export flux suspended resource status to prometheus
+name: flux-suspension-exporter
+description: helm chart for flux-suspension-exporter, a tool to export flux suspended resource status to prometheus
 
 # A chart can be either an 'application' or a 'library' chart.
 #
