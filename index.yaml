@@ -1,5 +1,17 @@
 apiVersion: v1
 entries:
+  flux-suspensions-exporter:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2025-02-23T06:21:01.840888229Z"
+    description: helm chart for flux-suspensions-exporter, a tool to export flux suspended
+      resource status to prometheus
+    digest: f9a4ffc4975ef8237c6007e9e6187bdcea4d8fbcf3451a1f0577f915644bb3db
+    name: flux-suspensions-exporter
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/flux-suspensions-exporter-0.1.0/flux-suspensions-exporter-0.1.0.tgz
+    version: 0.1.0
   katalog:
   - apiVersion: v2
     appVersion: 1.0.2
@@ -116,4 +128,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-28T06:56:43.119154173Z"
+generated: "2025-02-23T06:21:01.840908917Z"
