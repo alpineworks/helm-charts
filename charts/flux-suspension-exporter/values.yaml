@@ -1,9 +1,6 @@
-# Default values for flux-suspensions-exporter.
+# Default values for flux-suspension-exporter.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
-replicaCount: 1
-
 image:
   repository: ghcr.io/alpineworks/flux-suspension-exporter
   pullPolicy: IfNotPresent
