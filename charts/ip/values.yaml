@@ -27,6 +27,16 @@ podSecurityContext: {}
 
 securityContext: {}
 
+environmentVariables:
+  LOG_LEVEL: "info"
+
+  # metrics
+  METRICS_ENABLED: "true"
+  METRICS_PORT: "8081"
+
+  # tracing
+  TRACING_ENABLED: "false"
+
 service:
   type: ClusterIP
   port: 8080

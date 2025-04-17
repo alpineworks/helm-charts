@@ -4,6 +4,6 @@ description: helm chart for ip, a simple ip echoing service
 
 type: application
 
-version: 0.1.0
+version: 0.1.1
 
 appVersion: "v1.0.0"
