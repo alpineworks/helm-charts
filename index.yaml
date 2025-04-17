@@ -38,6 +38,16 @@ entries:
   ip:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2025-04-17T08:03:44.365057357Z"
+    description: helm chart for ip, a simple ip echoing service
+    digest: 30948038b2d39aa37d06f3f3c9b39d85c69ef2d9024bc8e896e02037e146835a
+    name: ip
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/ip-0.1.2/ip-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2025-04-17T06:47:52.734713874Z"
     description: helm chart for ip, a simple ip echoing service
     digest: ce01a42a7b278bbf21f8848ab9e96392801b1254a9d7cb4ab2677b761622c792
@@ -172,4 +182,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-17T06:47:52.734740904Z"
+generated: "2025-04-17T08:03:44.365078947Z"
