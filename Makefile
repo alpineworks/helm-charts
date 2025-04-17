@@ -18,3 +18,11 @@ lint-katalog-agent:
 .PHONY: lint-katalog
 lint-katalog:
 	helm lint charts/katalog
+
+.PHONY: lint-ip
+lint-ip:
+	helm lint charts/ip
+
+.PHONY: keda
+keda:
+	helm install keda kedacore/keda --namespace keda --create-namespace
