@@ -35,6 +35,17 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/flux-suspensions-exporter-0.1.0/flux-suspensions-exporter-0.1.0.tgz
     version: 0.1.0
+  ip:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2025-04-17T06:21:56.821119972Z"
+    description: helm chart for ip, a simple ip echoing service
+    digest: bc7f116321654d4d40e956972c098101dc53ea9e29794b4f62b50b4e078e2844
+    name: ip
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/ip-0.1.0/ip-0.1.0.tgz
+    version: 0.1.0
   katalog:
   - apiVersion: v2
     appVersion: 1.0.2
@@ -151,4 +162,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-23T08:45:03.703241242Z"
+generated: "2025-04-17T06:21:56.821132225Z"
