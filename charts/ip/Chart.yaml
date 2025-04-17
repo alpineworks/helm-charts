@@ -1,0 +1,9 @@
+apiVersion: v2
+name: ip
+description: helm chart for ip, a simple ip echoing service
+
+type: application
+
+version: 0.1.0
+
+appVersion: "v1.0.0"
