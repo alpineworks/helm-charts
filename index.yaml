@@ -182,4 +182,16 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/katalog-agent-0.1.0/katalog-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-17T08:03:44.365078947Z"
+  versitygw:
+  - apiVersion: v2
+    appVersion: 1.0.14
+    created: "2025-06-14T04:40:42.3193449Z"
+    description: A Helm chart for Versity Gateway, an S3-compatible object storage
+      application
+    digest: a7c696937e337f1de2be495fc6e370bbff7438085ba5fa2b4d2d03353488cf5c
+    name: versitygw
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/versitygw-0.1.0/versitygw-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-06-14T04:40:42.319370538Z"
