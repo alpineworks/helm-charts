@@ -23,6 +23,10 @@ lint-katalog:
 lint-ip:
 	helm lint charts/ip
 
+.PHONY: lint-versitygw
+lint-versitygw:
+	helm lint charts/versitygw
+
 .PHONY: keda
 keda:
 	helm install keda kedacore/keda --namespace keda --create-namespace
