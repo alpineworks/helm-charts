@@ -185,6 +185,17 @@ entries:
   versitygw:
   - apiVersion: v2
     appVersion: v1.0.14
+    created: "2025-06-15T02:35:15.792477972Z"
+    description: A Helm chart for Versity Gateway, an S3-compatible object storage
+      application
+    digest: 750a4fc555f4debbc138a81fd0bdb310bdbf7ac7ab2d57b9dd0fbbdd9dffe038
+    name: versitygw
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/versitygw-0.1.2/versitygw-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v1.0.14
     created: "2025-06-14T18:33:27.853789429Z"
     description: A Helm chart for Versity Gateway, an S3-compatible object storage
       application
@@ -205,4 +216,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/versitygw-0.1.0/versitygw-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-14T18:33:27.853817121Z"
+generated: "2025-06-15T02:35:15.792508058Z"
