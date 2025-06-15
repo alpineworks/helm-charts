@@ -96,10 +96,17 @@ autoscaling:
 persistence:
   enabled: true
   pvc:
-    name: versitygw
-    accessMode: ReadWriteMany
-    storageClassName: "" # Set to "" to use the default storage class
-    size: 100Gi
+    data:
+      name: versitygw
+      accessMode: ReadWriteMany
+      storageClassName: "" # Set to "" to use the default storage class
+      size: 100Gi
+    metadata:
+      enabled: false
+      name: versitygw-metadata
+      accessMode: ReadWriteMany
+      storageClassName: "" # Set to "" to use the default storage class
+      size: 10Gi
 
 # Additional volumes on the output Deployment definition.
 volumes:

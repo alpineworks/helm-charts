@@ -1,13 +1,28 @@
 {{- if .Values.persistence.enabled }}
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-    name: {{ .Values.persistence.pvc.name }}
+    name: {{ .Values.persistence.pvc.data.name }}
 spec:
     accessModes:
-        - {{ .Values.persistence.pvc.accessMode | default "ReadWriteMany" }}
-    storageClassName: {{ .Values.persistence.pvc.storageClassName }}
+        - {{ .Values.persistence.pvc.data.accessMode | default "ReadWriteMany" }}
+    storageClassName: {{ .Values.persistence.pvc.data.storageClassName }}
     resources:
         requests:
-            storage: {{ .Values.persistence.pvc.size }}
+            storage: {{ .Values.persistence.pvc.data.size }}
+{{- if .Values.persistence.pvc.metadata.enabled }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: {{ .Values.persistence.pvc.metadata.name }}
+spec:
+    accessModes:
+        - {{ .Values.persistence.pvc.metadata.accessMode | default "ReadWriteMany" }}
+    storageClassName: {{ .Values.persistence.pvc.metadata.storageClassName }}
+    resources:
+        requests:
+            storage: {{ .Values.persistence.pvc.metadata.size }}
+{{- end }}
 {{- end }}
