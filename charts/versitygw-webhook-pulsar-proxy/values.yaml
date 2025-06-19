@@ -48,6 +48,9 @@ service:
   type: ClusterIP
   port: 80
 
+metrics:
+  port: 8081
+
 httpRoute:
   enabled: false
   annotations: {}
@@ -72,12 +75,12 @@ resources:
 
 livenessProbe:
   httpGet:
-    path: /
-    port: http
+    path: /healthcheck
+    port: metrics
 readinessProbe:
   httpGet:
-    path: /
-    port: http
+    path: /healthcheck
+    port: metrics
 
 autoscaling:
   enabled: false
