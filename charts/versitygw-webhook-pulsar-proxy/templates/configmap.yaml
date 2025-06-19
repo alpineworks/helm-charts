@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "versitygw-webhook-pulsar-proxy.fullname" . }}-env-configmap
+  labels:
+    {{- include "versitygw-webhook-pulsar-proxy.labels" . | nindent 4 }}
+data:
+  {{- with .Values.environmentVariables }}
+  {{- toYaml . | nindent 2 }}
+  {{- end }}

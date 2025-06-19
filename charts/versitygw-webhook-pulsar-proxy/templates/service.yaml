@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "versitygw-webhook-pulsar-proxy.fullname" . }}
+  labels:
+    {{- include "versitygw-webhook-pulsar-proxy.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "versitygw-webhook-pulsar-proxy.selectorLabels" . | nindent 4 }}
