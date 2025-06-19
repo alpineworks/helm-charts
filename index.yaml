@@ -216,4 +216,15 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/versitygw-0.1.0/versitygw-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-15T02:35:15.792508058Z"
+  versitygw-webhook-pulsar-proxy:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2025-06-19T02:39:58.771460922Z"
+    description: A Helm chart for Kubernetes
+    digest: d7c9b905ba2fab7ebb3a40c8e14ddc0101b7f966f753bc42b320dbb1b082177f
+    name: versitygw-webhook-pulsar-proxy
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/versitygw-webhook-pulsar-proxy-0.1.0/versitygw-webhook-pulsar-proxy-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-06-19T02:39:58.771490939Z"
