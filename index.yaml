@@ -35,6 +35,17 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/flux-suspensions-exporter-0.1.0/flux-suspensions-exporter-0.1.0.tgz
     version: 0.1.0
+  glance:
+  - apiVersion: v2
+    appVersion: v0.8.4
+    created: "2025-07-09T17:20:48.239541306Z"
+    description: A self-hosted dashboard that puts all your feeds in one place
+    digest: b8bd46ad6ab2c8d8c60ff75f259d2545b9aa0b1aa229ec5124147414a30b1e01
+    name: glance
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/glance-0.1.0/glance-0.1.0.tgz
+    version: 0.1.0
   ip:
   - apiVersion: v2
     appVersion: v1.0.0
@@ -237,4 +248,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/versitygw-webhook-pulsar-proxy-0.1.0/versitygw-webhook-pulsar-proxy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-19T03:35:35.487458393Z"
+generated: "2025-07-09T17:20:48.239577515Z"
