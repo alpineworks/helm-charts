@@ -38,6 +38,16 @@ entries:
   glance:
   - apiVersion: v2
     appVersion: v0.8.4
+    created: "2025-07-10T15:42:48.17940693Z"
+    description: A self-hosted dashboard that puts all your feeds in one place
+    digest: 33d496ece9ff8a21932488555c0b0839b1ea1b37c3806e54150f8c4eb2535f68
+    name: glance
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/glance-0.1.1/glance-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v0.8.4
     created: "2025-07-09T17:20:48.239541306Z"
     description: A self-hosted dashboard that puts all your feeds in one place
     digest: b8bd46ad6ab2c8d8c60ff75f259d2545b9aa0b1aa229ec5124147414a30b1e01
@@ -248,4 +258,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/versitygw-webhook-pulsar-proxy-0.1.0/versitygw-webhook-pulsar-proxy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-09T17:20:48.239577515Z"
+generated: "2025-07-10T15:42:48.179439842Z"
