@@ -29,6 +29,8 @@ securityContext: {}
 
 environmentVariables: {}
 
+secretFrom: []
+
 config: |
   pages:
     - name: Home

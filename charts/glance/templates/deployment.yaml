@@ -35,6 +35,10 @@ spec:
           envFrom:
               - configMapRef:
                   name: {{ include "glance.fullname" . }}-env-configmap
+              {{- range .Values.secretFrom }}
+              - secretRef:
+                  name: {{ . }}
+              {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
