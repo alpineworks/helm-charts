@@ -205,6 +205,17 @@ entries:
     version: 0.1.0
   stable-diffusion:
   - apiVersion: v2
+    appVersion: v1.0.11
+    created: "2025-07-15T21:55:16.031574931Z"
+    description: Packaged Stable Diffusion with a companion UI and automatic model
+      retrieval - http://github.com/amithkk/stable-diffusion-k8s
+    digest: 60eea3df501450e2da8c40682bdd353b9a1b63585fdae16eb87bd86ca842eeb6
+    name: stable-diffusion
+    type: application
+    urls:
+    - https://github.com/alpineworks/helm-charts/releases/download/stable-diffusion-1.0.13/stable-diffusion-1.0.13.tgz
+    version: 1.0.13
+  - apiVersion: v2
     appVersion: v1.0.6
     created: "2025-07-15T17:47:52.281025103Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
@@ -325,4 +336,4 @@ entries:
     urls:
     - https://github.com/alpineworks/helm-charts/releases/download/versitygw-webhook-pulsar-proxy-0.1.0/versitygw-webhook-pulsar-proxy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-15T17:47:52.281082882Z"
+generated: "2025-07-15T21:55:16.031669209Z"
