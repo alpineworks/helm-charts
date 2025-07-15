@@ -2,16 +2,16 @@
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
-  name: {{ include "glance.fullname" . }}
+  name: {{ include "stable-diffusion.fullname" . }}
   labels:
-    {{- include "glance.labels" . | nindent 4 }}
+    {{- include "stable-diffusion.labels" . | nindent 4 }}
 spec:
   maxReplicaCount: {{ .Values.autoscaling.maxReplicas }}
   minReplicaCount: {{ .Values.autoscaling.minReplicas }}
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "glance.fullname" . }}
+    name: {{ include "stable-diffusion.fullname" . }}
   advanced:
     horizontalPodAutoscalerConfig:
       behavior:
