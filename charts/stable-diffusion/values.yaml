@@ -77,4 +77,7 @@ nodeSelector:
 
 tolerations: []
 
+# Runtime class name for container runtime (e.g., nvidia for GPU support)
+runtimeClassName: ""
+
 affinity: {}
