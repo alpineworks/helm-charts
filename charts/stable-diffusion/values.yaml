@@ -19,7 +19,7 @@ init:
   # - url: (required) url of the file to download
   #  filename: (optional) rename the downloaded file to this value
   models:
-    - url: "https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/blob/main/sd-v1-4.ckpt"
+    - url: "https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt"
       filename: model.ckpt
     - url: "https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth"
     - url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"
