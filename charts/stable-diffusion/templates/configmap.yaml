@@ -4,8 +4,4 @@ metadata:
   name: {{ include "stable-diffusion.fullname" . }}-config
 data:
   CLI_FLAGS: {{ .Values.cliFlags | quote }}
-  {{- if .Values.init.clipModel.enabled }}
-  TRANSFORMERS_OFFLINE: "1"
-  HF_DATASETS_OFFLINE: "1"
-  {{- end }}
 

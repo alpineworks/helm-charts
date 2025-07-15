@@ -6,22 +6,12 @@ metadata:
     {{- include "stable-diffusion.labels" . | nindent 4 }}
 spec:
   serviceName: {{ include "stable-diffusion.fullname" . }}
+  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "stable-diffusion.selectorLabels" . | nindent 6 }}
-  volumeClaimTemplates:
-    - metadata:
-        name: {{ include "stable-diffusion.fullname" . }}-model-store
-      spec:
-        accessModes:
-          - {{ .Values.persistence.accessMode }}
-        resources:
-          requests:
-            storage: {{ .Values.persistence.size }}
-        {{- with .Values.persistence.storageClass }}
-        storageClassName: {{ . | quote }}
-        {{- end }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -38,18 +28,6 @@ spec:
       serviceAccountName: {{ include "stable-diffusion.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      initContainers:
-        - name: ensure-stable-models
-          image: {{ .Values.init.image }}
-          command:
-            - /init.sh
-          volumeMounts:
-            - mountPath: /models
-              name: {{ include "stable-diffusion.fullname" . }}-model-store
-            - mountPath:  /init.sh
-              subPath:    {{ .Values.init.downloadMethod }}-init.sh
-              name:       init
-              readOnly:   true
       containers:
         - name: {{ .Chart.Name }}-stable-diffusion
           securityContext:
@@ -63,17 +41,8 @@ spec:
             - name: http
               containerPort: 7860
               protocol: TCP
-          volumeMounts:
-            - mountPath: /models
-              name: {{ include "stable-diffusion.fullname" . }}-model-store
-          # Todo - Implement an efficient readiness and liveness check
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      volumes:
-        - name: init
-          configMap:
-            name: {{ include "stable-diffusion.fullname" . }}-init-config
-            defaultMode: 0555
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
