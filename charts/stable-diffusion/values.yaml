@@ -13,7 +13,6 @@ image:
 # Init Container config
 init:
   image: alpine:3.21.2 # use alpine:3.21.2 for curl
-  downloadMethod: curl # use the `files/<downloadMethod>-init.sh` script at startup wget and curl provided.
   # Stable Diffusion and optional companion models. Change these out if you'd like
   # model:
   # - url: (required) url of the file to download
@@ -24,6 +23,10 @@ init:
     - url: "https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth"
     - url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"
     - url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth"
+  clipModel:
+    enabled: true
+    repoUrl: "https://huggingface.co/openai/clip-vit-large-patch14"
+    localPath: "/models/clip-vit-large-patch14"
 
 imagePullSecrets: []
 nameOverride: ""

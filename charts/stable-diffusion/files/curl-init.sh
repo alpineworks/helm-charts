@@ -19,4 +19,18 @@ curl -Lo {{ $models.filename }} {{ $models.url }}
 curl -LO {{ $models.url }}
 {{- end }}
 {{- end }}
+
+# Download CLIP model for offline use
+{{- if .Values.init.clipModel.enabled }}
+echo "Downloading CLIP model..."
+mkdir -p {{ .Values.init.clipModel.localPath }}
+cd {{ .Values.init.clipModel.localPath }}
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/config.json
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/tokenizer.json
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/tokenizer_config.json
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/vocab.json
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/merges.txt
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/special_tokens_map.json
+curl -LO {{ .Values.init.clipModel.repoUrl }}/resolve/main/pytorch_model.bin
+{{- end }}
 {{- end }}
