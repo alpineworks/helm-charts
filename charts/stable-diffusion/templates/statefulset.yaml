@@ -69,11 +69,11 @@ spec:
           # Todo - Implement an efficient readiness and liveness check
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          volumes:
-            - name: init
-              configMap:
-                name: {{ include "stable-diffusion.fullname" . }}-init-config
-                defaultMode: 0555
+      volumes:
+        - name: init
+          configMap:
+            name: {{ include "stable-diffusion.fullname" . }}-init-config
+            defaultMode: 0555
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
