@@ -1,0 +1,1 @@
+This is a direct copy of https://github.com/amithkk/stable-diffusion-k8s, with the compatibility tweaks to fix the initcontainer by @timothyclarke
